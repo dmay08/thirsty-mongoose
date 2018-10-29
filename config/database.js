@@ -6,5 +6,6 @@ mongoose.connect('mongodb://localhost/thirsty-mongoose',
 
 var db = mongoose.connection;
 db.once('open', function() {
-    console.log('Connected to MongoDB at')
-})
+    console.log(`Connected to MongoDB at ${db.host}:${db.port}`);
+});
+
